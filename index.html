@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CoVal</title>
+
+  <link rel="stylesheet" href="vendor/foundation.min.css">
+  <link rel="stylesheet" href="vendor/styleguide-v2.css">
+  <link rel="stylesheet" href="vendor/slick.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kad3hcl.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
+  <script src="https://kit.fontawesome.com/f713a12e61.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <span class="top-bar__button top-bar__button--left js-trigger-menu">menu</span>
+    <nav class="main-menu js-target-menu main-menu--left">
+      <a href="">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="authors.html">Authors</a>
+      <!-- <a href="by/all.html">Exchange</a> -->
+      <a href="https://thelivinglib.org/" target="_blank">The Living Library</a>
+    </nav>
+    <a class="top-bar__logo top-bar__logo__desktop" href="">Open Governance Research Exchange</em></a></a>
+    <a class="top-bar__logo top-bar__logo__mobile" href="">OGRX</a></a>
+    <span class="top-bar__button top-bar__button--text top-bar__button--right"><a href="https://thelivinglib.org/"
+        target="_blank">The Living Library <i class="material-icons">launch</i></a></span>
+    </nav>
+  </header>
+
+
+  <div class="organization-page">
+    <div class="top-section" style="background-color: #333333;">
+      <div class="row">
+        <div class="large-6 column organization-page__image-column">
+          <img class="organization-page__org-logo" src="images/organizations/coval-logo.png" alt="coval" title="coval">
+
+        </div>
+        <div class="large-6 column">
+          <div class="organization-page__description">CoVal is a not-for-profit social enterprise, based in the United
+            Kingdom but with an international reach. The organization builds online technologies that give people the
+            power to get things changed and shares these technologies so that they can be used anywhere.</div>
+          <div class="organization-page__extras">
+
+
+            <a href="https://twitter.com/CoVAL_eu" class="social-media-icon" target="_blank">
+              <img src="images/twitter-logo.png" alt="CoVal Twitter">
+            </a>
+
+
+            <!-- <a href="https://github.com/CoVal" class="social-media-icon organization-page--github" target="_blank">
+            <img src="images/github-logo.svg" alt="CoVal Github">
+          </a>
+          
+          
+          <a href="https://www.facebook.com/CoVal/" class="social-media-icon m-facebook" id="facebook-logo" target="_blank">
+            <img src="images/facebook-logo.png" alt="CoVal Facebook">
+          </a> -->
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- {# Extra Info Panel #} -->
+      <div class="extra-info-panel">
+        <div class="row">
+          <div class="large-10 column large-offset-1 column" style="text-align: left">
+            <p>CoVal believes that strong democratic accountability and a thriving civil society are vital to the common
+              welfare, which only can survive when people engage with their government and communities. CoVal works with
+              online technologies because the Internet can lower the barriers to taking the first civic or democratic
+              steps in a citizen’s life. Working with partner groups, the organization helps to build effective civic
+              websites through the implementation of in-house tools and software. CoVal ensures their projects have real
+              impact through a rigorous programme of research that they share in collaboration with civic tech
+              practitioners worldwide, providing global leadership and inspiration in their sector.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- {# Article Section #} -->
+    <div class="divider">
+      <h1>Articles</h1>
+    </div>
+    <div id="home-page">
+
+  
+    <div class="page-section results-section">
+      <div class="row expanded">
+        <div class="column large-12" style="padding-left: unset; padding-right: unset;">
+
+          <div class="content-container"  >
+            <div
+              class="result-item  f-mysociety f-effectiveness f-participation f-conceptual-framework f-social-movements   f-journal-article f-rebecca-rumbul m-civic-technology f-search-6qtt786ltsoqkiqe4ccueo "
+              style="display: inline-block; margin-left: -4px;" v-for="article in articleData">
+              <h3 class="result-item__name"><a :href="article.url" title="">{{article.title}}</a></h3>
+              <p class="result-item__authors"><a href="">{{article.authors}}</a></p>
+              <p class="result-item__authors"><a href="">{{article.publication_year}}</a></p>
+              <!-- <div class="result-item__taxonomy result-item__taxonomy--category"><span
+                  class="result-item__taxonomy__key">Category</span><span class="result-item__taxonomy__value"><a
+                    href="../all.html?f=true&amp;category=civic-technology"
+                    class="result-item__tag result-item__tag--civic-technology">Civic Technology</a></span></div>
+
+              <div class="result-item__taxonomy result-item__taxonomy--type"><span
+                  class="result-item__taxonomy__key">Type</span><span class="result-item__taxonomy__value"><a
+                    class="result-item__tag" href="../all.html?f=true&amp;type=journal-article">Journal
+                    Article</a></span></div> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="large-12 column" style="padding: 40px 0">
+        <p style="text-align: center;"><a class="button" href="organizations.html">All Organizations</a></p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class=' footer'>
+    <div class="row">
+      <div class="small-12 medium-3 large-3 column footer__content">
+        <h4>Sections</h4>
+        <a href="categories.html" class="footer-links">Categories</a>
+        <a href="authors.html" class="footer-links">Authors</a>
+        <!-- <a class="footer-links js-open-modal" href="#">Report Errors</a> -->
+        <a href="https://thelivinglib.org/" class="footer-links">The Living Library</a>
+        <!-- <a class="footer-links js-open-error-modal" data-modal="#error-modal" href="#">Report Errors</a> -->
+
+
+
+      </div>
+
+      <div class="small-12 medium-3 large-3 column footer__content">
+        <h4>More Information</h4>
+        <p>OGRX is a platform for browsing and sharing research findings about new, innovative ways to
+          solve public problems.</p>
+        <p>
+          <br>
+          <a class="button" href="submit.html" style="max-width: 180px;">Submit Research</a>
+        </p>
+      </div>
+
+      <div class="small-12 medium-6 large-6 column footer__content">
+        <h4>
+        </h4>
+        <a class="footer__partner-logo" target="_blank" href="http://www.thegovlab.org/"><img
+            src="images/govlab-logo-white.png" alt="NYU Gov Lab logo"></a>
+        <a class="footer__partner-logo" target="_blank" href="http://engineering.nyu.edu/tandon"><img
+            src="images/partners/nyu.png" alt="NYU Tandon logo"></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <div class="copyright">
+    <div class="row">
+      <div class="large-8 columns align-middle">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="copyright__cc-badge"
+            alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+          Commons Attribution-ShareAlike
+          4.0 International License</a>
+      </div>
+      <div class="large-4 columns">
+        <div class="powered-by">
+          <p>Powered by <a target="_blank" href="http://www.thegovlab.org/"><img src="images/govlab-logo-white.png"
+                alt="NYU Gov Lab logo" class="powered-by__logo"></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src='https://unpkg.com/vue@2.0.3/dist/vue.js'></script>
+<script src="https://unpkg.com/vue-meta/dist/vue-meta.min.js"></script>
+<script src="js/coval-ogrx.js"></script>
+
+</html>
