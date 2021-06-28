@@ -780,11 +780,11 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   .result-item__name {
     font-size: 1rem;
     text-transform: none;
-    min-height: 4.5rem; }
+    min-height: 2rem; }
   .result-item__authors a {
     font-size: .9rem;
     text-decoration: none !important;
-    color: rgba(0, 79, 111, 0.6); }
+    color: rgba(0, 79, 111, 0.9); }
     .result-item__authors a:hover {
       text-decoration: none;
       color: #004f6f; }
@@ -838,7 +838,7 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
       color: #d1b229; }
   .result-item__authors {
     font-size: .9rem;
-    min-height: 3rem; }
+    min-height: 1.5rem; }
   .result-item__unpaywall {
     position: absolute;
     bottom: 10px;
@@ -1063,3 +1063,9 @@ a {
       border-top: 7px solid transparent;
       border-bottom: 7px solid transparent;
       border-left: 7px solid #004f6f; }
+      #abstract > p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+      }

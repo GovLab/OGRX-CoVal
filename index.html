@@ -50,9 +50,9 @@
 
         </div>
         <div class="large-6 column">
-          <div class="organization-page__description">CoVal is a not-for-profit social enterprise, based in the United
-            Kingdom but with an international reach. The organization builds online technologies that give people the
-            power to get things changed and shares these technologies so that they can be used anywhere.</div>
+          <div class="organization-page__description">Co-VAL is an EU funded project that aims to find new ways of
+            examining the co-creation of value and its integration in order to transform public administration services
+            and processes</div>
           <div class="organization-page__extras">
 
 
@@ -60,15 +60,6 @@
               <img src="images/twitter-logo.png" alt="CoVal Twitter">
             </a>
 
-
-            <!-- <a href="https://github.com/CoVal" class="social-media-icon organization-page--github" target="_blank">
-            <img src="images/github-logo.svg" alt="CoVal Github">
-          </a>
-          
-          
-          <a href="https://www.facebook.com/CoVal/" class="social-media-icon m-facebook" id="facebook-logo" target="_blank">
-            <img src="images/facebook-logo.png" alt="CoVal Facebook">
-          </a> -->
 
           </div>
         </div>
@@ -99,34 +90,26 @@
     </div>
     <div id="home-page">
 
-  
-    <div class="page-section results-section">
-      <div class="row expanded">
-        <div class="column large-12" style="padding-left: unset; padding-right: unset;">
 
-          <div class="content-container"  >
-            <div
-              class="result-item  f-mysociety f-effectiveness f-participation f-conceptual-framework f-social-movements   f-journal-article f-rebecca-rumbul m-civic-technology f-search-6qtt786ltsoqkiqe4ccueo "
-              style="display: inline-block; margin-left: -4px;" v-for="article in articleData">
-              <h3 class="result-item__name"><a :href="article.url" title="">{{article.title}}</a></h3>
-              <p class="result-item__authors"><a href="">{{article.authors}}</a></p>
-              <p class="result-item__authors"><a href="">{{article.publication_year}}</a></p>
-              <!-- <div class="result-item__taxonomy result-item__taxonomy--category"><span
-                  class="result-item__taxonomy__key">Category</span><span class="result-item__taxonomy__value"><a
-                    href="../all.html?f=true&amp;category=civic-technology"
-                    class="result-item__tag result-item__tag--civic-technology">Civic Technology</a></span></div>
+      <div class="page-section results-section">
+        <div class="row expanded">
+          <div class="column large-12" style="padding-left: unset; padding-right: unset;">
 
-              <div class="result-item__taxonomy result-item__taxonomy--type"><span
-                  class="result-item__taxonomy__key">Type</span><span class="result-item__taxonomy__value"><a
-                    class="result-item__tag" href="../all.html?f=true&amp;type=journal-article">Journal
-                    Article</a></span></div> -->
+            <div class="content-container">
+              <div
+                class="result-item  f-mysociety f-effectiveness f-participation f-conceptual-framework f-social-movements   f-journal-article f-rebecca-rumbul m-civic-technology f-search-6qtt786ltsoqkiqe4ccueo "
+                style="display: inline-block; margin-left: -4px;" v-for="article in articleData">
+                <h3 class="result-item__name"><a :href="article.url" title="">{{article.title}}</a></h3>
+                <p class="result-item__authors"><a href="">{{article.authors}}</a></p>
+                <p class="result-item__authors"><a href="">{{article.publication_year}}</a></p>
+                <div id="abstract" v-html="article.abstract"></div>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
     <div class="row">
       <div class="large-12 column" style="padding: 40px 0">

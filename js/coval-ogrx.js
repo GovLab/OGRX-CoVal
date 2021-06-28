@@ -55,6 +55,7 @@ new Vue({
 ).then(data => {
   console.log(data)
   self.articleData = data.data;
+  
 })
 .catch(error => console.error(error));
     }
