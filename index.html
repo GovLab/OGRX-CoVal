@@ -92,7 +92,7 @@
               <div
                 class="result-item  f-mysociety f-effectiveness f-participation f-conceptual-framework f-social-movements   f-journal-article f-rebecca-rumbul m-civic-technology f-search-6qtt786ltsoqkiqe4ccueo "
                 style="display: inline-block; margin-left: -4px;" v-for="article in articleData">
-                <h3 class="result-item__name"><a :href="article.url" title="">{{article.title}}</a></h3>
+                <h3 class="result-item__name"><a :href="'/paper/' + article.slug" target="_blank" title="">{{article.title}}</a></h3>
                 <p class="result-item__authors"><a href="">{{article.authors}}</a></p>
                 <p class="result-item__authors"><a href="">{{article.publication_year}}</a></p>
                 <div id="abstract" v-html="article.abstract"></div>

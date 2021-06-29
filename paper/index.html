@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CoVal</title>
+
+  <link rel="stylesheet" href="../vendor/foundation.min.css">
+  <link rel="stylesheet" href="../vendor/styleguide-v2.css">
+  <link rel="stylesheet" href="../vendor/slick.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/kad3hcl.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/@directus/sdk-js@5.3.4/dist/directus-sdk.umd.min.js"></script>
+  <script src="https://kit.fontawesome.com/f713a12e61.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <span class="top-bar__button top-bar__button--left js-trigger-menu">menu</span>
+
+    <a class="top-bar__logo top-bar__logo__desktop" href="/">Open Governance Research Exchange</em></a></a>
+    <a class="top-bar__logo top-bar__logo__mobile" href="/">OGRX</a></a>
+    <span class="top-bar__button top-bar__button--text top-bar__button--right"><a href="https://thelivinglib.org/"
+        target="_blank">The Living Library <i class="material-icons">launch</i></a></span>
+    <!-- <span class="top-bar__button js-trigger-menu">more_vert</span>
+  <nav class="main-menu js-target-menu main-menu--right">
+    <a href="#">Github Repository</a>
+    <a href="./sandbox.html">Sandbox</a>
+  </nav> -->
+  </header>
+
+
+
+  <div id="home-page">
+    <div id="blog-single">
+      <div class="top-section top-section--main-color blog-header">
+        <h1>{{indexData[0].title}}
+        </h1>
+        <h3 class="blog-single__meta">{{indexData[0].year}} by {{indexData[0].authors}}</h3>
+        <div class="paper-metadata">
+        </div><a :href="indexData[0].url" target="_blank"
+          id="paper-access-button" class="button">Access this Publication</a>
+      </div>
+      <section class="blog-content blog-single">
+        <div class="row">
+          <div class="large-8 column large-offset-2" v-html="indexData[0].abstract"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class='footer'>
+    <div class="row">
+      <div class="small-12 medium-3 large-3 column footer__content">
+        <h4>Sections</h4>
+        <a href="/categories.html" class="footer-links">Categories</a>
+        <a href="/authors.html" class="footer-links">Authors</a>
+        <!-- <a class="footer-links js-open-modal" href="#">Report Errors</a> -->
+        <a href="https://thelivinglib.org/" class="footer-links">The Living Library</a>
+        <!-- <a class="footer-links js-open-error-modal" data-modal="#error-modal" href="#">Report Errors</a> -->
+
+
+
+      </div>
+
+      <div class="small-12 medium-3 large-3 column footer__content">
+        <h4>More Information</h4>
+        <p>OGRX is a platform for browsing and sharing research findings about new, innovative ways to solve public
+          problems.</p>
+        <p>
+          <br>
+          <a class="button" href="submit.html" style="max-width: 180px;">Submit Research</a>
+        </p>
+      </div>
+
+      <div class="small-12 medium-6 large-6 column footer__content">
+        <h4>
+        </h4>
+        <a class="footer__partner-logo" target="_blank" href="http://www.thegovlab.org/"><img
+            src="../images/govlab-logo-white.png" alt="NYU Gov Lab logo" /></a>
+        <a class="footer__partner-logo" target="_blank" href="http://engineering.nyu.edu/tandon"><img
+            src="../images/partners/nyu.png" alt="NYU Tandon logo" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+  <!-- modal window -->
+  <style type="text/css">
+    .modal.active {
+      display: block;
+    }
+  </style>
+  <div class="modal js-target-modal" id="error-modal">
+    <header class="modal__header">
+      <i class="modal__close material-icons js-close-modal">close</i>
+      <h1 class="modal__title">Report an Error</h1>
+    </header>
+
+    <footer class="modal__controls">
+      <input type="submit" name="submit" value="Submit" id="ss-submit">
+      <!-- <a class="button js-close-modal" href="#">OK</a> <a class="button js-close-modal" href="#">Cancel</a> -->
+    </footer>
+  </div>
+
+
+
+  <div class="copyright">
+    <div class="row">
+      <div class="large-8 columns align-middle">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="copyright__cc-badge"
+            alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+        This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>
+      </div>
+      <div class="large-4 columns">
+        <div class="powered-by">
+          <p>Powered by <a target="_blank" href="http://www.thegovlab.org/"><img src="/images/govlab-logo-white.png"
+                alt="NYU Gov Lab logo" class="powered-by__logo" /></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src='https://unpkg.com/vue@2.0.3/dist/vue.js'></script>
+  <script src="https://unpkg.com/vue-meta/dist/vue-meta.min.js"></script>
+  <script src="../js/coval-ogrx-article.js"></script>
+
+</body>
+
+</html>
